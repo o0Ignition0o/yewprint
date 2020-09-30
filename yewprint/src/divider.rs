@@ -33,7 +33,7 @@ impl Component for Divider {
 
     fn view(&self) -> Html {
         html! {
-            <div class="bp3-divider"></div>
+            <span class="bp3-divider"></span>
         }
     }
 }

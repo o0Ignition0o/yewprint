@@ -1,29 +1,21 @@
 use yew::prelude::*;
 use yewprint::{Button, Divider};
 
-pub struct Example {
-    link: ComponentLink<Self>,
-}
-
-pub enum Msg {
-    ToggleCollapse,
-}
+pub struct Example;
 
 impl Component for Example {
-    type Message = Msg;
+    type Message = ();
     type Properties = ();
 
-    fn create(_: Self::Properties, link: ComponentLink<Self>) -> Self {
-        Example {
-            link,
-        }
+    fn create(_: Self::Properties, _: ComponentLink<Self>) -> Self {
+        Self
     }
 
-    fn update(&mut self, msg: Self::Message) -> ShouldRender {
+    fn update(&mut self, _: Self::Message) -> ShouldRender {
         true
     }
 
-    fn change(&mut self, _props: Self::Properties) -> ShouldRender {
+    fn change(&mut self, _: Self::Properties) -> ShouldRender {
         true
     }
 
