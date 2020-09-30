@@ -1,6 +1,7 @@
 mod buttons;
 mod callout;
 mod collapse;
+mod divider;
 mod html_elements;
 mod icon;
 mod menu;
@@ -11,6 +12,7 @@ mod tree;
 pub use buttons::*;
 pub use callout::*;
 pub use collapse::*;
+pub use divider::*;
 pub use html_elements::*;
 pub use icon::*;
 pub use id_tree;

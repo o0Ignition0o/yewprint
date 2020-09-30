@@ -1,6 +1,7 @@
 use crate::buttons::*;
 use crate::callout::*;
 use crate::collapse::*;
+use crate::divider::*;
 use crate::icon::*;
 use crate::progressbar::*;
 use crate::tree::*;
@@ -115,6 +116,11 @@ impl Component for App {
                                         .callback(|_| Msg::GoToMenu(DocMenu::Collapse))
                                 />
                                 <MenuItem
+                                    text={html!("Divider")}
+                                    onclick=self.link
+                                        .callback(|_| Msg::GoToMenu(DocMenu::Divider))
+                                />
+                                <MenuItem
                                     text={html!("Icon")}
                                     onclick=self.link.callback(|_| Msg::GoToMenu(DocMenu::Icon))
                                 />
@@ -154,6 +160,7 @@ impl Component for App {
                                         DocMenu::Switch => html! (),
                                         DocMenu::Callout => html!(<CalloutDoc />),
                                         DocMenu::Collapse => html!(<CollapseDoc />),
+                                        DocMenu::Divider => html!(<DividerDoc />),
                                         DocMenu::Tree => html!(<TreeDoc />),
                                         DocMenu::Icon => html!(<IconDoc />),
                                         DocMenu::ProgressBar => html!(<ProgressBarDoc />),
@@ -177,6 +184,8 @@ pub enum DocMenu {
     Callout,
     #[to = "/#collapse"]
     Collapse,
+    #[to = "/#divider"]
+    Divider,
     #[to = "/#icon"]
     Icon,
     #[to = "/#menu"]

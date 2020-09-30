@@ -2,6 +2,7 @@ mod app;
 mod buttons;
 mod callout;
 mod collapse;
+mod divider;
 mod example;
 mod icon;
 mod progressbar;
